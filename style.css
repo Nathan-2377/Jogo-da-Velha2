@@ -1,0 +1,717 @@
+:root {
+  --cor-fundo: rgb(90, 226, 187);
+  --cor-main: rgb(65, 120, 209);
+  --cor-main-dark: rgb(21, 27, 205);
+  --cor-fonte: rgb(255 255 255);
+  --jogadorX: rgb(100 100 100);
+}
+
+/* Reset das configurações do navegador */
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+}
+  body {
+  font-family: Arial, sans-serif;
+}
+
+h4, h5 {
+  font-family: 'Nosifer', serif;
+}
+
+/* Definição do barra de navegação */
+.bg-cor-que-eu-quero {
+  background: rgb(65, 120, 209);
+}
+
+#coluna-jogo,
+#coluna-slideshow {
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+#coluna-jogo h4,
+#coluna-slideshow h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+#navbar-items .navbar-nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.navbar-nav a {
+  color: var(--cor-fonte);
+}
+
+/* Ajusta as configurações do container*/
+.principal {
+  width: 100%;
+  min-height: 100vh;
+}
+
+#container-top {
+  margin-top: 6rem;
+}
+
+i {
+  font-size: 3rem;
+}
+
+/* Configuração do tabuleiro */
+.tabuleiro {
+    width: 27rem;
+    max-width: 100%;
+    margin: 1rem auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .5rem;
+}
+
+.celula {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+
+    border: 2px solid #aaa;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.celula img {
+    display: block;
+    width: 80%;
+    height: 80%;
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+/* Definições do slider (galeria) */
+#slider {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+#slider .carousel-caption {
+  bottom: 1em;
+}
+
+#slider .carousel-caption h5 {
+  font-size: 2.5em;
+  text-shadow: #000 2px 2px;
+}
+
+.btn {
+  border-radius: 0;
+}
+
+#slider .btn {
+  padding: 0.3em 0.7em;
+  font-size: 1em;
+  margin-top: 4em;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: 0.7;
+}
+
+.carousel-control-prev i,
+.carousel-control-next i {
+  color: rgb(233, 229, 229);
+  font-size: 3em;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: rgb(231, 204, 204);
+  opacity: 0.8;
+}
+
+.carousel-indicators .active {
+  background-color: #000;
+}
+
+@media (min-width: 768px) {
+  #slider .carousel-caption {
+    bottom: 1em;
+  }
+
+  #slider .carousel-caption h5 {
+    font-size: 2em;
+    text-shadow: #000 2px 3px;
+  }
+
+  #slider .btn {
+    padding: 0.6em 1em;
+    font-size: 1em;
+    margin-top: 1em;
+  }
+
+  .carousel-indicators {
+    bottom: 0.25em;
+  }
+}
+.texto {
+  font-size: 0.75rem;
+  text-align: justify;
+}
+
+i {
+  
+  align-items: center;
+  font-size: 2.5em;
+  margin: .125em;
+}
+
+/* Controle das imagens do carrossel */
+#slider .carousel-item img {
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+    background-color: white;
+}
+
+/* Organização do carrossel */
+#slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+#container-carousel {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+}
+
+#slider {
+    width: 100%;
+    margin: 1rem auto;
+    overflow: hidden;
+}
+
+#slider .carousel-item img {
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+    background-color: white;
+}
+
+/* CONTEÚDO DA PÁGINA HOME */
+.home-conteudo {
+  margin-top: 120px;
+  margin-bottom: 40px;
+}
+
+.home-conteudo .container {
+  padding: 30px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+}
+
+.apresentacao {
+  background-color: rgb(65, 120, 209);
+  color: white;
+}
+
+.universo-games {
+  background-color: rgb(90, 226, 187);
+  color: #222;
+}
+
+.objetivo-pesquisa {
+  background-color: #f1f1f1;
+  color: #222;
+}
+
+.home-conteudo h2,
+.home-conteudo h3 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.home-conteudo p {
+  font-size: 1rem;
+  line-height: 1.7;
+  text-align: justify;
+}
+/* ============================= */
+/* PÁGINA HISTÓRIA               */
+/* ============================= */
+.pagina-historia {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.historia-introducao {
+    background-color: #e7f1ff;
+    border-left: 7px solid #0d6efd;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 25px;
+}
+
+.historia-introducao h1 {
+    color: #0d6efd;
+    margin-bottom: 20px;
+}
+
+.historia-introducao p,
+.historia-periodo p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.historia-periodo {
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border-left: 7px solid;
+}
+
+.historia-periodo h2 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+/* Cores de cada período */
+
+.historia-1950 {
+    background-color: #f1e8ff;
+    border-color: #6f42c1;
+}
+
+.historia-1970 {
+    background-color: #e2f5e9;
+    border-color: #198754;
+}
+
+.historia-1980 {
+    background-color: #fff3cd;
+    border-color: #ffc107;
+}
+
+.historia-1990 {
+    background-color: #fce4ec;
+    border-color: #d63384;
+}
+
+.historia-2000 {
+    background-color: #ffeadb;
+    border-color: #fd7e14;
+}
+/* ============================= */
+/* DESENVOLVIMENTO DE SISTEMAS    */
+/* ============================= */
+.historia-ds {
+    background-color: #e8f0fe;
+    border-left: 7px solid #0d6efd;
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.historia-ds h2 {
+    color: #0d6efd;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.historia-ds p {
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.imagem-ds {
+    width: 100%;
+    border-radius: 10px;
+    border: 3px solid #212529;
+}
+
+.legenda-ds {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 10px;
+}
+/* ============================= */
+/* PÁGINA SOBRE                   */
+/* ============================= */
+.pagina-sobre {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.sobre-projeto,
+.sobre-jogo,
+.sobre-bootstrap,
+.sobre-ia,
+.sobre-github {
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+.sobre-projeto {
+    background-color: #e7f1ff;
+    border-left: 7px solid #0d6efd;
+}
+
+.sobre-projeto h1 {
+    color: #0d6efd;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sobre-jogo {
+    background-color: #e2f5e9;
+    border-left: 7px solid #198754;
+}
+
+.sobre-jogo h2 {
+    color: #198754;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.sobre-card {
+    height: 100%;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.sobre-card i {
+    font-size: 2.5rem;
+    color: #0d6efd;
+}
+
+.sobre-card h3 {
+    margin-top: 15px;
+}
+
+.sobre-bootstrap {
+    background-color: #fff3cd;
+    border-left: 7px solid #ffc107;
+}
+
+.sobre-bootstrap h2 {
+    color: #856404;
+}
+
+.sobre-ia {
+    background-color: #f1e8ff;
+    border-left: 7px solid #6f42c1;
+}
+
+.sobre-ia h2 {
+    color: #6f42c1;
+}
+
+.sobre-github {
+    background-color: #e9ecef;
+    border-left: 7px solid #212529;
+    text-align: center;
+}
+.sobre-github h2 {
+    color: #212529;
+}
+
+.sobre-projeto p,
+.sobre-jogo p,
+.sobre-bootstrap p,
+.sobre-ia p,
+.sobre-github p {
+    line-height: 1.7;
+    text-align: justify;
+}
+/* ============================= */
+/* PÁGINA DICAS                   */
+/* ============================= */
+.pagina-dicas {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.dicas-introducao,
+.dicas-curiosidades,
+.dicas-generos,
+.dicas-programacao,
+.dicas-finais {
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+.dicas-introducao {
+    background-color: #e7f1ff;
+    border-left: 7px solid #0d6efd;
+    text-align: center;
+}
+
+.dicas-introducao h1 {
+    color: #0d6efd;
+    margin-bottom: 20px;
+}
+
+.dicas-introducao p,
+.dicas-programacao p {
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.dicas-curiosidades {
+    background-color: #f8f0ff;
+    border-left: 7px solid #6f42c1;
+}
+
+.dicas-curiosidades h2,
+.dicas-generos h2,
+.dicas-programacao h2,
+.dicas-finais h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.dicas-curiosidades h2 {
+    color: #6f42c1;
+}
+
+.dica-card {
+    height: 100%;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.dica-card i {
+    font-size: 2.5rem;
+}
+
+.dica-card h3 {
+    margin-top: 15px;
+    font-size: 1.4rem;
+}
+
+.dica-roxa {
+    border-top: 6px solid #6f42c1;
+}
+
+.dica-roxa i {
+    color: #6f42c1;
+}
+
+.dica-laranja {
+    border-top: 6px solid #fd7e14;
+}
+
+.dica-laranja i {
+    color: #fd7e14;
+}
+
+.dica-rosa {
+    border-top: 6px solid #d63384;
+}
+
+.dica-rosa i {
+    color: #d63384;
+}
+
+.dicas-generos {
+    background-color: #e2f5e9;
+    border-left: 7px solid #198754;
+}
+
+.dicas-generos h2 {
+    color: #198754;
+}
+
+.genero-card {
+    height: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.genero-card h3 {
+    font-size: 1.2rem;
+    color: #198754;
+}
+
+.genero-card p {
+    margin-bottom: 0;
+}
+
+.dicas-programacao {
+    background-color: #fff3cd;
+    border-left: 7px solid #ffc107;
+}
+
+.dicas-programacao h2 {
+    color: #856404;
+}
+
+.etapas-jogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.etapas-jogo div {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.etapas-jogo span {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fd7e14;
+    margin-bottom: 10px;
+}
+
+.etapas-jogo h3 {
+    font-size: 1.2rem;
+}
+
+.dicas-finais {
+    background-color: #fce4ec;
+    border-left: 7px solid #d63384;
+}
+
+.dicas-finais h2 {
+    color: #d63384;
+}
+
+.dicas-finais li {
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+/* ============================= */
+/* PÁGINA CONTATO                 */
+.pagina-contato {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.contato-introducao,
+.contato-localizacao,
+.contato-projeto {
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+.contato-introducao {
+    background-color: #e7f1ff;
+    border-left: 7px solid #0d6efd;
+    text-align: center;
+}
+
+.contato-introducao h1 {
+    color: #0d6efd;
+    margin-bottom: 20px;
+}
+
+.contato-introducao p,
+.contato-localizacao p,
+.contato-projeto p {
+    line-height: 1.7;
+}
+
+.contato-localizacao {
+    background-color: #e2f5e9;
+    border-left: 7px solid #198754;
+}
+
+.contato-localizacao h2 {
+    color: #198754;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.contato-localizacao h3 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.mapa-escola {
+    overflow: hidden;
+    border-radius: 10px;
+    border: 3px solid #198754;
+}
+
+.mapa-escola iframe {
+    display: block;
+}
+
+.contato-projeto {
+    background-color: #f1e8ff;
+    border-left: 7px solid #6f42c1;
+}
+
+.contato-projeto h2 {
+    color: #6f42c1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contato-link-card {
+    height: 100%;
+    padding: 25px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.contato-link-card i {
+    font-size: 2.5rem;
+    color: #6f42c1;
+}
+
+.contato-link-card h3 {
+    margin-top: 15px;
+}
+/* FUNDO DA ÁREA PRINCIPAL DO JOGO */
+.principal {
+    background-image:
+        linear-gradient(
+            rgba(3, 8, 25, 0.55),
+            rgba(3, 8, 25, 0.65)
+        ),
+        url("../images/Arena-futurista.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
